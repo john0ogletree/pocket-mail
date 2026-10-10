@@ -1,0 +1,21 @@
+Ignore active local configuration (use maddy.conf.example for public repo)
+​maddy.conf
+​Ignore local SQLite databases and state files
+​*.db
+*.db-journal
+*.db-wal
+data/
+state/
+tls/
+​Ignore cryptographic keys and certificates
+​*.key
+*.pem
+*.crt
+dkim/
+​Ignore log files and background output
+​*.log
+nohup.out
+​OS & Environment specific files
+​.DS_Store
+Thumbs.db
+.env
