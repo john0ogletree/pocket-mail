@@ -33,6 +33,7 @@ Modern self-hosting often pushes users toward complex server clusters or paid th
 .
 ├── maddy.conf.example   # Generic, sanitized configuration template
 ├── .gitignore           # Keeps local databases, keys, and logs safe
+├── index.html
 └── README.md            # Project overview and documentation
 ```
 
