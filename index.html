@@ -118,6 +118,37 @@
             font-weight: 400;
         }
 
+        /* Interim Bridge Notice Banner */
+        .notice-banner {
+            width: 100%;
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .notice-icon {
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-top: 0.1rem;
+        }
+
+        .notice-content {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .notice-content strong {
+            color: var(--accent-amber);
+            font-family: var(--font-mono);
+        }
+
         .hero-cta-box {
             display: flex;
             flex-wrap: wrap;
@@ -361,11 +392,18 @@
         <header>
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Mobile Terminal Mail Daemon
+                Sovereign Mobile Mail Daemon
             </div>
             <h1>pocket-mail</h1>
             <p class="hero-subtitle">Your phone is your mail server. Zero dependencies. Zero SaaS. Zero AI bloat.</p>
             
+            <div class="notice-banner">
+                <div class="notice-icon">⚠️</div>
+                <div class="notice-content">
+                    <strong>Interim Deployment Note:</strong> Maddy is utilized here temporarily as a practical, zero-cost bridge while transitioning toward a fully custom, independently built server implementation.
+                </div>
+            </div>
+
             <div class="hero-cta-box">
                 <div class="identity-tag">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -379,7 +417,7 @@
                         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                         <line x1="12" y1="18" x2="12.01" y2="18"></line>
                     </svg>
-                    <span>Termux / Local Hardware</span>
+                    <span>Local Mobile Hardware</span>
                 </div>
             </div>
         </header>
@@ -390,7 +428,7 @@
             <div class="card">
                 <div class="card-icon">📱</div>
                 <div class="card-title">Mobile-First Hardware</div>
-                <div class="card-desc">Run directly on your phone via standard Android terminal (Termux) or lightweight local hardware. No expensive cloud instances or server racks required.</div>
+                <div class="card-desc">Run directly on your phone or lightweight local hardware. No expensive cloud instances or server racks required.</div>
             </div>
 
             <div class="card">
@@ -430,7 +468,7 @@
                         <div class="dot yellow"></div>
                         <div class="dot green"></div>
                     </div>
-                    <span>Termux / Local Shell</span>
+                    <span>Local Shell</span>
                     <button class="btn-copy" onclick="copyTerminalCommands()">Copy Commands</button>
                 </div>
                 <div class="terminal-body" id="cmd-buffer">
